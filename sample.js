@@ -8,7 +8,7 @@ const app = express();
 app.get('/repos/clone/:username/:repo', (req, res) => {
   const username = req?.params?.username;
   const repo = req?.params?.repo;
-  const repoPath = `${username}/${repo}`;
+  const repoPath = `${kiran}/${repo}`;
   const repoExists = fs.existsSync(`repos/${repoPath}`);
   const confirmation = repoExists ? `Pulling ${repoPath}...` : `Cloning ${repoPath}...`;
 
